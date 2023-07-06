@@ -1,0 +1,61 @@
+### README
+
+## Header and Footer
+- Every page has a simple Header and Footer. The Header consists of a Logo and Links of the Home, Products,
+- SignUp, SignIn and LogOut. Using Session Storage if the user is not logged in the Cart Page and the LogOut Page
+- are unavailable to the user. While if he is logged in then the SignIn and SignUp pages become unavailable.
+
+- The Footer consists of simple links and descriptors.
+
+## Home Page
+
+- The home page has a bit of simple text at the beginning. Then the offers show up. They are dynamic, meaning
+- the information is taken from the server and then displayed on the webpage. The page will display as
+- many offers as there are rows in the database.
+
+## Products Page
+
+- The products page connects to the database and using a while loop displays all products from the server on
+- the webpage. A search bar was added that shows the products that match with a part of their title to the search 
+- request. If the user clicks on any product image, he will be redirected to the item page.
+
+## Search Page
+
+- Not displayed to the user. Checks if the user clicked the search button. and if so, retrieves the values
+- from the server and creates a new SQL query string that searches the tbl_products table for products whose
+- product_title column contains the query value. If no search query has been submitted, the code selects all products
+- from the tbl_products table. Next, the code iterates over the rows of the result set using a while loop and generates
+- HTML code for each product.
+
+## Item Page
+
+- The item page Uses the Products database to keep track of what item was selected and then display
+- the relevant information. It also uses session storage to check if the user is logged in, in order to leave
+- a review, if not logged in then the review button will not appear. When the review button is pressed a popup
+- appears on the screen where the review should be written and submitted. After submission the page updates
+- the database with the new review, the rating and the name of the user that was collected through session storage.
+- All the previous reviews are accessed for every item displayed on the item page.
+
+## Submit Page
+
+- The page is not displayed for the user and handles the sending of data to the datbase.
+
+## SignUp Page
+
+- The signup page displays a SignUp form where the user is required to input a username, an email that has the @ symbol,
+- and a password. After the button is pressed the information is stored on the database so that the login page
+- can compare the values for a signup.
+
+## SignIn Page
+
+- THe sign in page displays a form where the user has to input their Username and password. Then the page compares them
+- to values, in the database. If there is no match then a message appears informing the user of a wrong username or 
+- password. If a match is found, then the user is redirected to the products page and a welcom message is dissplayed.
+
+## script page
+
+- Contains all javascript.
+
+## style page
+
+- contains all css
